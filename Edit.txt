@@ -1,0 +1,144 @@
+ClrHome
+1→X
+1→Y
+1→U
+1→V
+1→O
+1→P
+1→N
+1→S
+1→T
+1→Z
+
+For(S,1,10
+For(L,1,26
+Output(S,L,0
+If [A](S,L)=-1
+Output(S,L,"S"
+
+If [A](S,L)=-2
+Output(S,L,"E"
+
+If [A](S,L)=-3
+Output(S,L,"T"
+
+If [A](S,L)=-4
+Output(S,L,"?"
+
+If [A](S,L)=-5
+Output(S,L,"!"
+
+If [A](S,L)=-6
+Output(S,L,"°"
+
+If [A](S,L)=1
+Output(S,L,"π"
+
+If [A](S,L)=0
+Then
+Output(S,L," "
+End
+End
+End
+While 1=1
+X→U
+Y→V
+
+getKey→K
+-(K=24)+(K=26)+Y→Y
+-(K=25)+(K=34)+X→X
+
+If K=11
+prgmWASD
+
+If K=105
+1→[A](X,Y)
+
+If K=21
+Then
+If N=1
+Then
+
+End
+
+
+End
+
+Output(X,Y,"*"
+
+If K=95
+Then
+-1→[A](X,Y)
+End
+
+If K=85
+Then
+-2→[A](X,Y)
+End
+
+If K=45
+0→[A](X,Y)
+
+
+
+If K=75
+Then
+-3→[A](X,Y)
+End
+
+If K=65
+Then
+-4→[A](X,Y)
+End
+If K=55
+Then
+-5→[A](X,Y)
+End
+
+If K=21
+Then
+If Z=1
+Then
+0→Z
+X→S
+Y→T
+-6→[A](X,Y)
+Else
+1→Z
+X→[B](S,T)
+Y→[C](S,T)
+
+S→[B](X,Y)
+T→[C](X,Y)
+
+-6→[A](X,Y)
+End
+End
+
+If K≠0
+Then
+Output(U,V," "
+
+If [A](U,V)=1
+Output(U,V,"π"
+
+If [A](U,V)=-1
+Output(U,V,"S"
+
+If [A](U,V)=-2
+Output(U,V,"E"
+
+If [A](U,V)=-3
+Output(U,V,"T"
+
+If [A](U,V)=-4
+Output(U,V,"?"
+
+If [A](U,V)=-5
+Output(U,V,"!"
+
+If [A](U,V)=-6
+Output(U,V,"°"
+
+End
+End
