@@ -1,0 +1,199 @@
+ClrHome
+1→X
+1→Y
+1→U
+1→V
+1→K
+1→O
+1→P
+0→C
+0→R
+0→Q
+1→M
+1→D
+1→I
+[A](10,27)+1→[A](10,27)
+For(S,1,10
+For(L,1,26
+Output(S,L,0
+
+If [A](S,L)=1
+Then
+Output(S,L,"π"
+End
+If [A](S,L)=-1
+Then
+S→X
+L→Y
+S→O
+L→P
+
+Output(S,L,"S"
+End
+If [A](S,L)=-2
+Then
+Output(S,L,"E"
+End
+If [A](S,L)=-3
+Then
+Output(S,L,"T"
+End
+If [A](S,L)=-4
+Then
+Output(S,L,"?"
+End
+If [A](S,L)=0 oder [A](S,L)=-5
+Then
+Output(S,L," "
+End
+If [A](S,L)=-6
+Then
+Output(S,L,"°"
+End
+End
+End
+
+startTmr→T
+While 3=3
+getKey→K
+X→U
+Y→V
+-(K=24)+(K=26)+Y→Y
+-(K=25)+(K=34)+X→X
+If [A](X,Y)=0
+Goto W
+
+If [A](X,Y)=1
+Then
+O→X
+P→Y
+M+1→M
+End
+If [A](X,Y)=-2
+Then
+Goto F
+End
+If [A](X,Y)=-5 und R=1
+Then
+U→X
+V→Y
+End
+
+If [A](X,Y)=-4 und R=0
+Then
+U→X
+V→Y
+End
+
+If [A](X,Y)=-3 und R=0 und Q=0
+Then
+1→R
+1→Q
+U→X
+V→Y
+For(S,1,10
+For(L,1,26
+If [A](S,L)=-4
+Then
+Output(S,L," "
+End
+If [A](S,L)=-5
+Then
+Output(S,L,"!"
+End
+
+End
+End
+End
+
+If [A](X,Y)=-3 und R=1 und Q=0
+Then
+0→R
+1→Q
+U→X
+V→Y
+For(S,1,10
+For(L,1,26
+If [A](S,L)=-4
+Then
+Output(S,L,"?"
+End
+If [A](S,L)=-5
+Then
+Output(S,L," "
+End
+End
+End
+End
+
+If [A](X,Y)=-6
+Then
+Output(X,Y,"°"
+
+If I=1
+Then
+0→I
+X→J
+[B](J,Y)→X
+[C](J,Y)→Y
+End
+
+End
+
+Lbl W
+Output(X,Y,C
+If K≠0 und [A](U,V)=0
+Then
+Output(U,V," "
+Else
+If K≠0 und ([A](U,V)=-4 oder [A](U,V)=-5)
+Then
+Output(U,V," "
+End
+
+If K≠0
+Then
+If I=0
+Then
+2→I
+Else
+If I=2
+Then
+1→I
+End
+End
+
+If Q=1
+Then
+2→Q
+End
+If Q=2
+Then
+0→Q
+End
+If [A](U,V)=-6
+Output(U,V,"°"
+
+
+If [A](U,V)=-1
+Then
+Output(U,V,"S"
+End
+If [A](U,V)=-3
+Then
+Output(U,V,"T"
+End
+End
+End
+
+End
+
+Lbl F
+Output(5,14,prüfeTmr(T+1))
+Output(4,9,"WELL DONE"
+([A](1,27)+M/[A](10,27))→[A](1,27)
+Output(6,15,M
+Output(6,9,"TRIES:"
+Output(5,9,"TIME:"
+Pause 
+1
